@@ -15,6 +15,14 @@
       ]
     }
   },
+  "test": {
+    "files": {
+      "exclude": [
+        "dist",
+        "node_modules"
+      ]
+    }
+  },
   "tasks": {
     "build": "deno run --allow-env --allow-net --allow-read --allow-run --allow-write _build.ts",
     "deploy": "deno task build && deno task build deploy"
