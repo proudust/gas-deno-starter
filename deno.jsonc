@@ -1,4 +1,9 @@
 {
+  "compilerOptions": {
+    "types": [
+      "https://raw.githubusercontent.com/proudust/deno-gas-types/main/types/index.d.ts"
+    ]
+  },
   "fmt": {
     "files": {
       "exclude": [

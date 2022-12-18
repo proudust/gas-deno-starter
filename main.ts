@@ -1,5 +1,3 @@
-/// <reference path="https://raw.githubusercontent.com/proudust/deno-gas-types/main/types/index.d.ts" />
-
 declare let global: {
   doGet: (e?: GoogleAppsScript.Events.DoGet) =>
     | GoogleAppsScript.HTML.HtmlOutput
