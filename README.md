@@ -15,13 +15,27 @@ Please click
 
 or
 
+Run on your terminal:
+
 ```
 git clone --depth=1 https://github.com/proudust/gas-deno-starter <your_project_name>
 cd <your_project_name>
 rm -rf .git
 ```
 
-### 3. Fix LICENSE
+### 3. Login @google/clasp
+
+Run on your terminal:
+
+```
+deno run -A npm:@google/clasp@2.4.2 login
+```
+
+After login, `~/.clasprc.json` will be generated. If you want to deploy Google
+Apps Script from GitHub Actions, paste the contents of `~/.clasprc.json` into
+your repository secrets with the name `CLASPRC`.
+
+### 4. Change Template Files
 
 **.clasp.json**
 
@@ -56,7 +70,7 @@ Copyright (c) [Year] [Your Name]
 Permission is hereby granted, free of charge, to any person obtaining a copy
 ```
 
-### 4. Deploy your scripts
+### 5. Deploy your scripts
 
 **Build and Deploy**
 
@@ -85,5 +99,5 @@ deno task build
 
 - [@google/clasp](https://github.com/google/clasp)
 - [esbuild](https://github.com/evanw/esbuild)
+- [esbuild_deno_loader](https://github.com/lucacasonato/esbuild_deno_loader)
 - [esbuild-gas-plugin](https://github.com/mahaker/esbuild-gas-plugin)
-- [esbuild_plugin_http_fetch](https://github.com/jed/esbuild-plugin-http-fetch)
