@@ -18,15 +18,6 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: npm
-
-      - name: Install Dependencies
-        run: npm ci
-
       - name: Format Check
         run: deno fmt --check
 

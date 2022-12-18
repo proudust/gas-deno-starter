@@ -4,11 +4,9 @@ The starter template for Google Apps Script by clasp and deno
 
 ## Getting started
 
-### 1. Install JavaScript Runtimes
+### 1. Install Deno
 
-- [Deno.js](https://deno.land/#installation) - Used by formatter, linter and
-  test runner.
-- [Node.js](https://nodejs.org/ja/) - Used by deploy to Google Apps Script.
+- [Deno.js](https://deno.land/#installation)
 
 ### 2. Clone template
 
@@ -23,13 +21,7 @@ cd <your_project_name>
 rm -rf .git
 ```
 
-### 3. Install dependencies
-
-```
-npm ci
-```
-
-### 4. Fix LICENSE
+### 3. Fix LICENSE
 
 **.clasp.json**
 
@@ -64,7 +56,7 @@ Copyright (c) [Year] [Your Name]
 Permission is hereby granted, free of charge, to any person obtaining a copy
 ```
 
-### 5. Deploy your scripts
+### 4. Deploy your scripts
 
 **Build and Deploy**
 
@@ -74,14 +66,10 @@ deno task deploy
 
 ```
 $ deno task deploy
-Warning deno task is unstable and may drastically change in the future
 Task deploy deno task build && deno task build deploy
-Warning deno task is unstable and may drastically change in the future
 Task build deno run --allow-env --allow-net --allow-read --allow-run --allow-write --unstable _build.ts
-Warning deno task is unstable and may drastically change in the future
 Task build deno run --allow-env --allow-net --allow-read --allow-run --allow-write --unstable _build.ts "deploy"
-$ npx clasp push -f
-- Pushing files…
+Warning: Not implemented: process.on("rejectionHandled")
 └─ dist/appsscript.json
 └─ dist/out.js
 Pushed 2 files.
