@@ -29,7 +29,8 @@ switch (command) {
   }
 
   case "deploy": {
-    await $`npx clasp push -f`;
+    await $`deno run --allow-env --allow-net --allow-read --allow-sys --allow-write npm:@google/clasp@2.4.2 push -f`
+      .stdin("\n");
     break;
   }
 
