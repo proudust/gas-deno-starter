@@ -1,7 +1,7 @@
-import gasPlugin from "https://cdn.esm.sh/esbuild-gas-plugin@0.4.0/mod.ts";
+import gasPlugin from "https://esm.sh/esbuild-gas-plugin@0.5.0/mod.ts";
 import httpPlugin from "https://deno.land/x/esbuild_plugin_http_fetch@v1.0.3/index.js";
 import { parse } from "https://deno.land/std@0.155.0/flags/mod.ts";
-import { build } from "https://deno.land/x/esbuild@v0.12.15/mod.js";
+import { build } from "https://deno.land/x/esbuild@v0.15.16/mod.js";
 import $ from "https://deno.land/x/dax@0.17.0/mod.ts";
 
 const command = parse(Deno.args, {})._[0] || "build";
