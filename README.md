@@ -6,7 +6,7 @@ The starter template for Google Apps Script by clasp and deno
 
 ### 1. Install Deno
 
-- [Deno.js](https://deno.land/#installation)
+[How to install Deno](https://deno.land/manual/getting_started/installation)
 
 ### 2. Clone template
 
