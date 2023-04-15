@@ -2,7 +2,7 @@ import gasPlugin from "https://esm.sh/esbuild-gas-plugin@0.5.0/mod.ts";
 import { denoPlugin } from "https://deno.land/x/esbuild_deno_loader@0.6.0/mod.ts";
 import { parse } from "https://deno.land/std@0.167.0/flags/mod.ts";
 import { build } from "https://deno.land/x/esbuild@v0.15.16/mod.js";
-import $ from "https://deno.land/x/dax@0.17.0/mod.ts";
+import $ from "https://deno.land/x/dax@0.31.0/mod.ts";
 
 const command = parse(Deno.args, {})._[0] || "build";
 switch (command) {
@@ -30,7 +30,7 @@ switch (command) {
 
   case "deploy": {
     await $`deno run --allow-env --allow-net --allow-read --allow-sys --allow-write npm:@google/clasp@2.4.2 push -f`
-      .stdin("\n");
+      .stdinText("\n");
     break;
   }
 
