@@ -17,7 +17,7 @@ or
 
 Run on your terminal:
 
-```
+```sh
 git clone --depth=1 https://github.com/proudust/gas-deno-starter <your_project_name>
 cd <your_project_name>
 rm -rf .git
@@ -27,7 +27,7 @@ rm -rf .git
 
 Run on your terminal:
 
-```
+```sh
 deno run -A npm:@google/clasp@2.4.2 login
 ```
 
@@ -52,7 +52,7 @@ your repository secrets with the name `CLASPRC`.
 
 [What is appsscript.json ?](https://developers.google.com/apps-script/concepts/manifests)
 
-```
+```json
 {
   "timeZone": "<Your Time Zone>",
   "exceptionLogging": "STACKDRIVER",
@@ -74,7 +74,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 
 **Build and Deploy**
 
-```
+```sh
 deno task deploy
 ```
 
@@ -91,7 +91,7 @@ Pushed 2 files.
 
 **Build Only**
 
-```
+```sh
 deno task build
 ```
 
