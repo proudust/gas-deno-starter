@@ -1,6 +1,6 @@
 import gasPlugin from "https://esm.sh/esbuild-gas-plugin@0.6.0/mod.ts";
 import { denoPlugins } from "https://deno.land/x/esbuild_deno_loader@0.8.1/mod.ts";
-import { parse } from "https://deno.land/std@0.182.0/flags/mod.ts";
+import { parse } from "https://deno.land/std@0.190.0/flags/mod.ts";
 import { build } from "https://deno.land/x/esbuild@v0.17.19/mod.js";
 import $ from "https://deno.land/x/dax@0.33.0/mod.ts";
 
