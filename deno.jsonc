@@ -10,6 +10,7 @@
   ],
   "tasks": {
     "build": "deno run --allow-env --allow-net --allow-read --allow-run --allow-write _build.ts",
-    "deploy": "deno task build && deno task build deploy"
+    "deploy": "deno task build && deno task build deploy",
+    "lock": "(rm deno.lock || true) && deno cache --reload *.ts **/*.ts npm:@google/clasp@2.4.2"
   }
 }
