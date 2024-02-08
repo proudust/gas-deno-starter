@@ -1,7 +1,7 @@
-import gasPlugin from "https://esm.sh/esbuild-gas-plugin@0.6.0/mod.ts";
+import { GasPlugin } from "npm:esbuild-gas-plugin@0.8.0";
 import { denoPlugins } from "https://deno.land/x/esbuild_deno_loader@0.9.0/mod.ts";
 import { parse } from "https://deno.land/std@0.190.0/flags/mod.ts";
-import { build } from "https://deno.land/x/esbuild@v0.20.0/mod.js";
+import { build, type Plugin } from "https://deno.land/x/esbuild@v0.20.0/mod.js";
 import $ from "https://deno.land/x/dax@0.33.0/mod.ts";
 
 const command = parse(Deno.args, {})._[0] || "build";
@@ -16,7 +16,7 @@ switch (command) {
         target: "es2017", // Workaround for jquery/esprima#2034
         plugins: [
           ...denoPlugins(),
-          gasPlugin,
+          GasPlugin as unknown as Plugin,
         ],
       }),
       (async function copy() {
